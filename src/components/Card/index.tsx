@@ -44,7 +44,7 @@ export const Card = ({ simplePokemon, pokemonSearched }: CardProps) => {
 
   return (
     <div
-      className="h-44 w-52 bg-white hover:bg-blue-300 transition m-5 flex justify-between rounded-md cursor-pointer shadow-xl"
+      className="h-44 w-52 bg-white hover:bg-blue-300 transition m-5 flex justify-between rounded-md cursor-pointer shadow-xl dark:bg-gray-900 hover:dark:bg-gray-500"
       onClick={() => handleDetailPokemonPage(pokemon?.id)}
     >
       {isLoading ? (
@@ -52,7 +52,7 @@ export const Card = ({ simplePokemon, pokemonSearched }: CardProps) => {
           <Skeleton />
         </div>
       ) : (
-        <div className="w-full h-full flex flex-col">
+        <div className="w-full h-full flex flex-col dark:text-white">
           <div className="w-full flex justify-around items-center mt-2">
             <h2 className="text-2xl font-medium">{pokemon?.name}</h2>
             <p className="text-xl font-normal">{`#${pokemon?.order}`}</p>

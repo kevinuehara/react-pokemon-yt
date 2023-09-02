@@ -16,14 +16,8 @@ export class PokemonService {
     return pokemon;
   }
 
-  static async searchPokemonByName(name: string): Promise<Pokemon> {
-    const response = await fetch(`${API_BASE_URL}/${name}`);
-    const pokemon: Pokemon = await response.json();
-    return pokemon;
-  }
-
-  static async searchPokemonById(id: string): Promise<Pokemon> {
-    const response = await fetch(`${API_BASE_URL}/${id}`);
+  static async searchPokemon(nameOrId: string): Promise<Pokemon> {
+    const response = await fetch(`${API_BASE_URL}/${nameOrId}`);
     const pokemon: Pokemon = await response.json();
     return pokemon;
   }

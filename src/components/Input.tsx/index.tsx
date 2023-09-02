@@ -19,6 +19,7 @@ export const Input = ({ onHandleSearch }: InputProps) => {
           placeholder="Buscar pokémon"
         />
         <button
+          aria-label="botão de busca"
           className="h-full bg-blue-600 hover:bg-blue-400 w-16 flex justify-center items-center rounded-md"
           onClick={() => onHandleSearch(pokemon)}
         >

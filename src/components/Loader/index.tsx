@@ -17,7 +17,9 @@ export const Loader = () => {
           fill="currentFill"
         />
       </svg>
-      <label className="mt-2 text-xl text-blue-600">Carregando...</label>
+      <label className="mt-2 text-xl text-blue-600 dark:text-white">
+        Carregando...
+      </label>
     </div>
   );
 };

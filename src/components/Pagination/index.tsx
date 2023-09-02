@@ -14,16 +14,16 @@ export const Pagination = ({
       <label
         className={`mr-2 ${
           previousPage !== null
-            ? "text-blue-600 hover:text-blue-800 cursor-pointer"
+            ? "text-blue-600 hover:text-blue-800 cursor-pointer dark:text-white"
             : "text-gray-500"
         }`}
         onClick={previousPage !== null ? onHandlePrevious : () => {}}
       >
         {"<<"} Anterior
       </label>
-      <label className="text-blue-600">||</label>
+      <label className="text-blue-600 dark:text-white">||</label>
       <label
-        className="ml-2 text-blue-600 hover:text-blue-800 cursor-pointer"
+        className="ml-2 text-blue-600 hover:text-blue-800 cursor-pointer dark:text-white"
         onClick={onHandleNext}
       >
         Próximo {">>"}
