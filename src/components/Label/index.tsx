@@ -37,6 +37,7 @@ export const Label = ({ label }: LabelProps) => {
 
   return (
     <div
+      data-testId="label wrapper"
       className={`${color} rounded-md h-2 w-16 text-white p-4 flex justify-center items-center`}
     >
       <p>{label}</p>

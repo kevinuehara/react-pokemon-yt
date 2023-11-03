@@ -50,6 +50,7 @@ export const Details = () => {
 
   return (
     <div
+      data-testId="main-div"
       className={`m-screen flex flex-col  bg-blue-100 ${isDark ? "dark" : ""}`}
     >
       <div className="dark:bg-gray-700 h-screen">
@@ -77,6 +78,7 @@ export const Details = () => {
                   <div className="flex flex-col items-center">
                     <label className="text-2xl text-blue-700 dark:text-white">{`#${pokemon?.id}`}</label>
                     <img
+                      aria-label="imagem pokemon"
                       src={pokemon?.sprites.front_default}
                       alt="pokemon"
                       className="w-64"

@@ -44,6 +44,7 @@ export const Card = ({ simplePokemon, pokemonSearched }: CardProps) => {
 
   return (
     <div
+      aria-label="card pokemon"
       className="h-44 w-52 bg-white hover:bg-blue-300 transition m-5 flex justify-between rounded-md cursor-pointer shadow-xl dark:bg-gray-900 hover:dark:bg-gray-500"
       onClick={() => handleDetailPokemonPage(pokemon?.id)}
     >
@@ -67,6 +68,7 @@ export const Card = ({ simplePokemon, pokemonSearched }: CardProps) => {
               ))}
             </div>
             <img
+              aria-label="imagem pokemon"
               className="h-32 w-32"
               src={pokemon?.sprites.front_default}
               alt="Pokemon Sprite"

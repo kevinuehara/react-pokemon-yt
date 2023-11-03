@@ -40,9 +40,9 @@ const Home = () => {
   };
 
   const handlePreviousPage = () => {
-    if (!previousPage) return;
-
-    getPokemons(previousPage);
+    if (previousPage) {
+      getPokemons(previousPage);
+    }
   };
 
   useEffect(() => {
@@ -78,7 +78,10 @@ const Home = () => {
   }, [setIsDark]);
 
   return (
-    <div className={`h-full m-full bg-blue-100 ${isDark ? "dark" : ""}`}>
+    <div
+      data-testid="main-div"
+      className={`h-full m-full bg-blue-100 ${isDark ? "dark" : ""}`}
+    >
       <div className="dark:bg-gray-700">
         <Header title="Pokédex">
           <Input onHandleSearch={onHandleSearch} />

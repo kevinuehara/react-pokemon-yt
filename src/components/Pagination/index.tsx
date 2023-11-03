@@ -13,11 +13,11 @@ export const Pagination = ({
     <>
       <label
         className={`mr-2 ${
-          previousPage !== null
+          Boolean(previousPage)
             ? "text-blue-600 hover:text-blue-800 cursor-pointer dark:text-white"
             : "text-gray-500"
         }`}
-        onClick={previousPage !== null ? onHandlePrevious : () => {}}
+        onClick={Boolean(previousPage) ? onHandlePrevious : () => {}}
       >
         {"<<"} Anterior
       </label>
